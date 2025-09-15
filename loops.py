@@ -26,7 +26,7 @@ wordList = ['toast', 'boat', 'jam', 'do', 'a', 'antidisestablishmentarianism']
 wordLengthLimit = 4
 longWords = shortWords = 0
 for thisWord in wordList:
-    if thisWord.__len__ <= wordLengthLimit:
+    if len(thisWord) <= wordLengthLimit:
         shortWords += 1
         continue
     else:
