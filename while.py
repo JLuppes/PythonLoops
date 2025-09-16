@@ -34,12 +34,12 @@ while countDown > 0:
 # Else
 magicNumber = 3
 countDown = 10
-while countDown > 0:
+while countDown >= 0:
     countDown -= 1
+    print(f"Countdown: {countDown}")
     if countDown == magicNumber:
         print(f"Found the magic number: {countDown}")
         break
-    print(f"Countdown: {countDown}")
 else: 
     print("Magic number not found!")
     
