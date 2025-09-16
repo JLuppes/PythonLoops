@@ -10,6 +10,7 @@ runTimes = 3
 while runTimes > 0:
     print(f'RunTimes is now {runTimes}')
     runTimes -= 1
+    # runTimes += 1  # Will run infinitely
 
 # Entry Controlled
 stuckInASpiral = False
@@ -27,12 +28,13 @@ print("The End!")
 countDown = 10
 while countDown > 0:
     countDown -= 1
-    even = countDown % 2
-    if even == 1: continue
+    remainder = countDown % 2
+    if remainder == 1: continue
     print(f"Even numbers only: {countDown}")
 
 # Else
 magicNumber = 3
+# magicNumber = 300 # Number not found
 countDown = 10
 while countDown >= 0:
     countDown -= 1
