@@ -4,6 +4,9 @@ def sayHello():
     print("Hello there!")
 
 
+sayHello()
+
+
 # Function definitions can have parameters
 
 
@@ -11,9 +14,14 @@ def introduce(name):
     print(f"This is {name}")
 
 
+introduce("Me")
+
+
 def makeSandwich(filling, wrapper):
     print(f"You made a {filling} sandwich with a {wrapper} wrapper")
 
+
+makeSandwich("Peanut Butter", "Cracker")
 
 # Invoke a function
 sayHello()
@@ -102,8 +110,8 @@ def makeItWeird(oldWord):
 
 
 print(f"A weird word: {makeItWeird("Toast Boat")}")
-# wordResponse = input("Enter a word to make it weird: ") 
-# print(makeItWeird(wordResponse))
+wordResponse = input("Enter a word to make it weird: ")
+print(makeItWeird(wordResponse))
 
 # Pass
 
