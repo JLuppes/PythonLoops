@@ -19,17 +19,17 @@ def makeSandwich(filling, wrapper):
 sayHello()
 sayHello()
 sayHello()
-# sayHello("You") # Wrong number of arguments
+# sayHello("You") # Error: Wrong number of arguments
 
 introduce("Guybrush Threepwood")
 introduce("Largo LaGrande")
 introduce("Governer Marley")
-# introduce("Carla", "Otis", "Meathook") # Wrong number of arguments
+# introduce("Carla", "Otis", "Meathook") # Error: Wrong number of arguments
 
 makeSandwich("Tofu", "Pita")
 makeSandwich("Hot Dog", "Bun")
 makeSandwich("Pancake", "Pancake")
-# makeSandwich("Pancake", "Pancake", "Toast") # Wrong number of arguments
+# makeSandwich("Pancake", "Pancake", "Toast") # Error: Wrong number of arguments
 
 # Parameters vs Arguments
 
@@ -70,8 +70,8 @@ def fitCheck(**gear):
 
 
 fitCheck(shoes="Zero Drop", jacket="Zippy", hat="Tinfoil")
-# fitCheck(hat="Propeller",shoes="Bowling") # Missing Keyword
-# fitCheck(jacket="Long")  # Missing Keyword
+# fitCheck(hat="Propeller",shoes="Bowling") # Error: Missing Keyword
+# fitCheck(jacket="Long")  # Error: Missing Keyword
 
 # Default Parameter Values
 
@@ -102,7 +102,7 @@ def makeItWeird(oldWord):
 
 
 print(f"A weird word: {makeItWeird("Toast Boat")}")
-# wordResponse = input("Enter a word to make it weird: ")
+# wordResponse = input("Enter a word to make it weird: ") 
 # print(makeItWeird(wordResponse))
 
 # Pass
@@ -120,7 +120,7 @@ def argumentsInOrder(a, b, c, /):
 
 argumentsInOrder("first", "middle", "last")
 # argumentsInOrder(a="first", b="last", c="middle")
-# # ^ Unexpected Keyword Argument
+# # ^ Error: Unexpected Keyword Argument
 
 # Keyword Only Arguments
 
@@ -131,7 +131,7 @@ def argumentsByName(*, alpha, omega):
 
 argumentsByName(alpha="Zeta", omega="Bodega")
 # argumentsByName("alfalfa", "nutella")
-# # ^ takes 0 positional arguments but 2 were given
+# # ^ Error: takes 0 positional arguments but 2 were given
 
 # Positional-Only and Keyword-only
 
