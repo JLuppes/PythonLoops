@@ -101,17 +101,19 @@ def trickOrTreat(candyList):
 
 candies = ['Rollos', 'M+Ms', 'Sour Gummy Worms']
 trickOrTreat(candies)
+# trickOrTreat("Reeseesesses")
 
 # Return Values
 
 
 def makeItWeird(oldWord):
+    print(f"Your word is {oldWord}")
     return oldWord.swapcase().zfill(18)
 
 
 print(f"A weird word: {makeItWeird("Toast Boat")}")
-wordResponse = input("Enter a word to make it weird: ")
-print(makeItWeird(wordResponse))
+# wordResponse = input("Enter a word to make it weird: ")
+# print(makeItWeird(wordResponse))
 
 # Pass
 
@@ -127,7 +129,7 @@ def argumentsInOrder(a, b, c, /):
 
 
 argumentsInOrder("first", "middle", "last")
-# argumentsInOrder(a="first", b="last", c="middle")
+# argumentsInOrder(a="first", c="last", b="middle")
 # # ^ Error: Unexpected Keyword Argument
 
 # Keyword Only Arguments
@@ -144,22 +146,25 @@ argumentsByName(alpha="Zeta", omega="Bodega")
 # Positional-Only and Keyword-only
 
 
-def argumentSoup(pos1, pos2, pos3, /, *, key1, key2, key3):
+def argumentSoup(pos1, pos2, pos3, /, either, *, key1, key2, key3):
     print(f"Positionals: {pos1}, {pos2}, {pos3}")
+    print(f"Neither arg: {either}")
     print(f"Keywords: {key1}, {key2}, {key3}")
 
 
 argumentSoup("first pos", "second pos", "third pos",
+             "either",
              key3="third key", key1="first key", key2="second key")
 
 
 # Recursion
 def stalactite(eons):
     if eons > 0:
+        # stalactite(eons-1) # stalagmite
         for i in range(eons):
             print("#", end='')
         print()
-        stalactite(eons-1)
+        stalactite(eons-1)  # stalactite
     else:
         print(f"\n\n\n\nWhoah look up!")
 
