@@ -3,6 +3,7 @@
 def sayHello():
     print("Hello there!")
 
+
 # Function definitions can have parameters
 
 
@@ -70,7 +71,7 @@ def fitCheck(**gear):
 
 fitCheck(shoes="Zero Drop", jacket="Zippy", hat="Tinfoil")
 # fitCheck(hat="Propeller",shoes="Bowling") # Missing Keyword
-# fitCheck(jacket="Long") # Missing Keyword
+# fitCheck(jacket="Long")  # Missing Keyword
 
 # Default Parameter Values
 
@@ -100,7 +101,9 @@ def makeItWeird(oldWord):
     return oldWord.swapcase().zfill(18)
 
 
-print(makeItWeird("Toast Boat"))
+print(f"A weird word: {makeItWeird("Toast Boat")}")
+# wordResponse = input("Enter a word to make it weird: ")
+# print(makeItWeird(wordResponse))
 
 # Pass
 
@@ -108,7 +111,7 @@ print(makeItWeird("Toast Boat"))
 def barelyAFunction():
     pass  # no error!
 
-# Positional Only/Keyword Only Arguments
+# Positional Only Arguments
 
 
 def argumentsInOrder(a, b, c, /):
@@ -116,8 +119,10 @@ def argumentsInOrder(a, b, c, /):
 
 
 argumentsInOrder("first", "middle", "last")
-# argumentsInOrder(last = "first", first = "last", middle = "middle")
+# argumentsInOrder(a="first", b="last", c="middle")
 # # ^ Unexpected Keyword Argument
+
+# Keyword Only Arguments
 
 
 def argumentsByName(*, alpha, omega):
@@ -127,6 +132,8 @@ def argumentsByName(*, alpha, omega):
 argumentsByName(alpha="Zeta", omega="Bodega")
 # argumentsByName("alfalfa", "nutella")
 # # ^ takes 0 positional arguments but 2 were given
+
+# Positional-Only and Keyword-only
 
 
 def argumentSoup(pos1, pos2, pos3, /, *, key1, key2, key3):
@@ -150,3 +157,4 @@ def stalactite(eons):
 
 
 stalactite(4)
+# stalactite(20)
