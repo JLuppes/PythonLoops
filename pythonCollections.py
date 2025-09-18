@@ -2,11 +2,11 @@
 # List, Set, Dictionary, Tuple
 
 ## List
+### Lists are ordered and changeable, duplicates allowed
 birdList = ['eagle', 'hawk', 'chickadee']
 print(birdList) # ['eagle', 'hawk', 'chickadee']
 
 ### Access a List
-### Lists are ordered and changeable, duplicates allowed
 print(birdList[0]) # eagle
 birdList[0] = "ostrich"
 print(birdList[0]) # ostrich
@@ -21,11 +21,11 @@ print(f"Length of birdList: {len(birdList)}") # 3
 
 ### Add New Items
 birdList.append("grackle")
-print(birdList) # ['ostrich', 'ostrich', 'chickadee', 'grackle]
+print(birdList) # ['ostrich', 'ostrich', 'chickadee', 'grackle']
 
 ### Remove a Specific Item
 birdList.remove("chickadee")
-print(birdList) # ['ostrich', 'ostrich',  'grackle']
+print(birdList) # ['ostrich', 'ostrich', 'grackle']
 
 ### Remove and return the last item
 print(f"I just caught a {birdList.pop()}!") # I just caught a grackle!
