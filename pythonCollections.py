@@ -16,7 +16,7 @@ birdList[1] = "ostrich"
 print(birdList) # ['ostrich', 'ostrich', 'chickadee']
 
 ### Check length with len()
-print(f"Length of birdList: {len(birdList)}")
+print(f"Length of birdList: {len(birdList)}") # 3
 
 ## Tuple
 ### Ordered, unchangeable, duplicates allowed
