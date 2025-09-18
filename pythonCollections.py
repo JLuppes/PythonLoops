@@ -34,8 +34,8 @@ print(birdList) # ['ostrich', 'ostrich']
 ## Tuple
 ### Ordered, unchangeable, duplicates allowed
 lunchTuple = ("Pizza", "Salad", "Cookie")
-print(lunchTuple)
-print(lunchTuple[1])
+print(lunchTuple) # ('Pizza', 'Salad', 'Cookie')
+print(lunchTuple[1]) # Salad
 
 ## Dictionary
 ### Key-Value Pairs, ordered, changable, no duplicates
@@ -44,16 +44,21 @@ bestPets = {
     "cat": "Ducky",
     "gremlin": "Ace"    
 }
-print(f"Best dog: {bestPets["dog"]}")
-print(f"Best cat: {bestPets["cat"]}")
-print(f"Best gremlin: {bestPets["gremlin"]}")
+print(f"Best dog: {bestPets["dog"]}") # Best dog: Guts
+print(f"Best cat: {bestPets["cat"]}") # Best cat: Ducky 
+print(f"Best gremlin: {bestPets["gremlin"]}") # Best gremlin: Ace
 
 ### Length (number of items)
-print(f"Number of best pets: {len(bestPets)}")
+print(f"Number of best pets: {len(bestPets)}") # 3
 
 ## Set
 ### Unordered, unchangeable, unindexed
 funWords = {"skedaddle", "florf", "shazow"}
-print(f"Some Fun words: {funWords}")
+print(f"Some Fun words: {funWords}") # Some Fun words: {'florf', 'skedaddle', 'shazow'}
 for thisWord in funWords:
-    print(f"Look at this word: {thisWord}")
+    print(f"Look at this word: {thisWord}") # Look at this word: florf ...
+    
+funWords.add("squiggly")
+print(funWords) # {'squiggly', 'florf', 'skedaddle', 'shazow'}
+funWords.remove("florf")
+print(funWords) # {'squiggly', 'skedaddle', 'shazow'}
